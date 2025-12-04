@@ -4,8 +4,11 @@ public class ColorBox extends Box{
 
     String color;
 
-    ColorBox(double width, double height, double depth, double weght , String color){
+    ColorBox(){}
 
+    ColorBox(double width, double height, double depth, double weight , String color){
+        super(width,height,depth,weight);
+        this.color = color;
     }
 
     public void describeBox(){
