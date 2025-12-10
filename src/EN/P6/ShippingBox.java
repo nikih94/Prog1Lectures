@@ -9,6 +9,10 @@ public class ShippingBox extends Box implements Shippable{
         this.shippingAddress = shippingAddress;
     }
 
+    public String toString(){
+        return shippingAddress;
+    }
+
     @Override
     public void printShippingLabel() {
         System.out.println("Shipping address: "+ shippingAddress);
