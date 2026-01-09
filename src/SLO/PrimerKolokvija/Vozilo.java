@@ -21,5 +21,6 @@ public class Vozilo {
 
         t.izpisi();
         m.izpisi();
+        System.out.println("Check!");
     }
 }
