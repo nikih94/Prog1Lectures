@@ -14,9 +14,13 @@ public class Midterm2Task1 extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-        this.setLayout(new GridLayout(3,1));
+        this.setLayout(new GridLayout(4,1));
+
+
+
         JButton close = new JButton("Close");
         close.addActionListener(new CloseListner());
+
 
         this.add(close);
         JButton number = new JButton("16");
@@ -36,6 +40,14 @@ public class Midterm2Task1 extends JFrame {
         JTextField field = new JTextField();
         field.addActionListener(new FieldListener(number));
         this.add(field);
+
+        JButton clone = new JButton("100");
+
+        CloneListner cloneListener = new CloneListner(number,clone);
+        clone.addActionListener(cloneListener);
+        number.addActionListener(cloneListener);
+
+        add(clone);
 
 
         this.setVisible(true);
